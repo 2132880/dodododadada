@@ -27,7 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <script src="assets/js/modernizr.js"></script>
+    
   </head>
 
   <body>
@@ -82,13 +82,13 @@
 					<div class="form-group">
 					  <label for="service" class = "control-label col-sm-2">Select date of service:</label>
 					  <div class="col-sm-10">
-						<input type = "date" name = "date" class = "form-control" id = "date-service" name = "dateService">
+						<input type = "date" name = "date" class = "form-control" id = "date-service" name = "dateService" required>
 					  </div>
 					</div>
 					<div class="form-group">
 					  <label for="time" class = "control-label col-sm-2">Available time:</label>
 					  <div class="col-sm-10">
-						  <select class="form-control" id="time" name = "resTime">
+						  <select class="form-control" id="time" name = "resTime" required>
 							<option value = "0">Select Time</option>
 							<option value = "8:30am - 11:30am">8:30am - 11:30am</option>
 							<option value = "9:30am - 12:30pm">9:30am - 12:30pm</option>
@@ -151,7 +151,31 @@
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.hoverdir.js"></script>
 	<script src="assets/js/jquery.hoverex.min.js"></script>
-  	<script src="assets/js/custom.js"></script>
+  	
+  	<script>
+  		$(document).ready(function(){
+  			$('#date-service').on('change', function(){
+  				$.ajax({
+  					url: 'check-reserve-times.php',
+  					type: 'GET',
+  					data: {
+  						dateSelected: $('#date-service').val()
+  					},
+  					dataType: 'html',
+  					success:function(val){
+  						console.log(val);
+  						$('#time').html(val);
+  					},
+  					error: function(xhr, status, error) {
+  						console.log('error');
+  						console.log(error);
+  					  	var err = eval("(" + xhr.responseText + ")");
+  					  	alert(err.Message);
+  					}
+  				});
+  			});
+  		});
+  	</script
 
 
   </body>

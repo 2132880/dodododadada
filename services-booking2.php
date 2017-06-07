@@ -89,37 +89,37 @@
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="serviceType">What type of service do you want?</label>
 						<div class="col-sm-10">
-						  <input type="text" class="form-control" name = "serviceType" id="serviceType" placeholder="Type of Service">
+						  <input type="text" class="form-control" name = "serviceType" id="serviceType" placeholder="Type of Service" required>
 						</div>
 					</div>
 					 <div class="form-group">
 						<label class="control-label col-sm-2" for="email">Email:</label>
 						<div class="col-sm-10">
-						  <input type="email" class="form-control" name = "email" id="email" placeholder="Enter email">
+						  <input type="email" class="form-control" name = "email" id="email" placeholder="Enter email" required>
 						</div>
 					  </div>
 				   <div class="form-group">
 						<label class="control-label col-sm-2" for="firstName">First Name:</label>
 						<div class="col-sm-10">
-						  <input type="text" class="form-control" name = "firstName" id="firstName" placeholder="First Name">
+						  <input type="text" class="form-control" name = "firstName" id="firstName" placeholder="First Name" required>
 						</div>
 					</div>
 				   <div class="form-group">
 						<label class="control-label col-sm-2" for="lastName">Last Name:</label>
 						<div class="col-sm-10">
-						  <input type="text" class="form-control" name = "lastName" id="lastName" placeholder="Last Name">
+						  <input type="text" class="form-control" name = "lastName" id="lastName" placeholder="Last Name" required>
 						</div>
 					</div>
 					 <div class="form-group">
 						<label class="control-label col-sm-2" for="contactNumber">Contact Number: </label>
 						<div class="col-sm-10"> 
-						  <input type="text" class="form-control" name = "contactNumber" id="contactNumber" placeholder="Contact Number">
+						  <input type="text" class="form-control" name = "contactNumber" id="contactNumber" placeholder="Contact Number" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="address">Complete Address:</label>
 						<div class="col-sm-10">
-						  <input type="text" class="form-control" name = "address" id="address" placeholder="Address">
+						  <input type="text" class="form-control" name = "address" id="address" placeholder="Address" required> 
 						</div>
 					</div>
 					

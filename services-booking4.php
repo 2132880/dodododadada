@@ -1,3 +1,32 @@
+<?php
+	require_once './connect_db/connect.php';
+	session_start();
+	$date = $_SESSION['date'];
+	$time = $_SESSION['time'];
+	$serviceType = $_SESSION['serviceType']; 
+	$email = $_SESSION['email'];
+	$firstName = $_SESSION['firstName'];
+	$lastName = $_SESSION['lastName'];
+	$contactNumber = $_SESSION['contactNumber'];
+	$address = $_SESSION['address'];
+	
+	if(isset($_POST['nextpage4'])){
+		$stmt = $connection->prepare(
+			"INSERT INTO booking 
+				(date, time, serviceType, email, firstName, lastName, contactNumber, address)
+				VALUES (?,?,?,?,?,?,?,?)");
+		if(!$stmt){
+			
+		}
+		else{
+			$stmt->bind_param("ssssssss", $date, $time, $serviceType, $email, $firstName, $lastName, $contactNumber, $address);
+			if(!$stmt->execute()){
+				echo "Error";
+			}
+		}
+	}
+	mysqli_close($connection);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -140,4 +169,3 @@
 
   </body>
 </html>
-\

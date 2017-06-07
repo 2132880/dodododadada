@@ -97,7 +97,7 @@
 					<p>Booking Details</p>
 				</div>
 				<div class = "col-xs-12">
-					<form action = "book.php" method = "post">
+					<form action = "services-booking4.php" method = "post">
 						<div class = "table-responsive">
 							
 								<table class = "table">
