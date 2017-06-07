@@ -1,7 +1,7 @@
 <?php
 	$dbhost = 'localhost';
 	$dbuser = 'root';
-	$dbpass = 'usbw';
+	$dbpass = 'slsc';
 	$dbName = 'online_shop';
 	$connection = mysqli_connect($dbhost, $dbuser, $dbpass);
 
